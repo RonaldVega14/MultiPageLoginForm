@@ -130,7 +130,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
         prefixIcon: Icon(Icons.phone),
         labelText: 'Teléfono',
         hintText: 'Teléfono',
-        contentPadding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
+        contentPadding: EdgeInsets.zero,
         border: OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.blueAccent,
@@ -142,7 +142,9 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
       ),
     );
 //Cuenta CEDEVAL o Cuenta...
-    final accountsField = TextFormField(
+    final accountsField = 
+    Container(
+      child: TextFormField(
       validator: (val) => !val.contains('@') ? 'Usuario Incorrecto' :null,
       onSaved: (val) => _email = val,
       style: TextStyle(fontFamily: 'Montserrat', fontSize: 15.0, color: Colors.black),
@@ -160,7 +162,10 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
           borderRadius: BorderRadius.circular(25.0)
         )
       ),
+    ),
+
     );
+    
 
     return  Scaffold(
       resizeToAvoidBottomPadding: false,
@@ -185,7 +190,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
                 mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Container(
-                padding: EdgeInsets.fromLTRB(80.0, 30.0, 80.0, 10.0),
+                padding: EdgeInsets.fromLTRB(80.0, 30.0, 80.0, 5.0),
                 child: Center(
                   child: SizedBox(
                     height: 40.0,
@@ -195,6 +200,22 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
                   ),
                 ),
               ),
+              new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                  child: new Text(
+                    "Registrate como persona Natura",
+                    style: style.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent,
+                      fontSize: 15.0,
+                    ),
+                  ),
+              ),
+            ],
+          ),
           new Padding(
             padding: const EdgeInsets.only(bottom: 10.0)
             ),
