@@ -164,7 +164,6 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
 
     return  Scaffold(
       resizeToAvoidBottomPadding: false,
-
       body: Center(
         child: new Form(
           key:formKey,
@@ -182,6 +181,8 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
             child: SingleChildScrollView(
               reverse: false,
               child: new Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Container(
                 padding: EdgeInsets.fromLTRB(80.0, 30.0, 80.0, 10.0),
@@ -195,108 +196,108 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
                 ),
               ),
           new Padding(
-            padding: const EdgeInsets.only(bottom: 15.0)
+            padding: const EdgeInsets.only(bottom: 10.0)
             ),
           new Container(
             width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
+            margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0),
             alignment: Alignment.center,
             padding: const EdgeInsets.only(left: 0.0, right: 10.0),
             child: apellidosField
           ),
           new Padding(
-            padding: const EdgeInsets.only(top: 10.0)
+            padding: const EdgeInsets.only(top: 7.0)
             ),
           new Container(
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
+              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0),
               alignment: Alignment.center,
               padding: const EdgeInsets.only(left: 0.0, right: 10.0),
               child: nombresField
             ),
           ),
           new Padding(
-            padding: const EdgeInsets.only(top: 10.0)
+            padding: const EdgeInsets.only(top: 7.0)
             ),
           new Container(
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
+              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0),
               alignment: Alignment.center,
               padding: const EdgeInsets.only(left: 0.0, right: 10.0),
               child: nitField
             ),
           ),
           new Padding(
-            padding: const EdgeInsets.only(top: 10.0)
+            padding: const EdgeInsets.only(top: 7.0)
             ),
             new Container(
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
+              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0),
               alignment: Alignment.center,
               padding: const EdgeInsets.only(left: 0.0, right: 10.0),
               child: duiField
             ),
           ),
           new Padding(
-            padding: const EdgeInsets.only(top: 10.0)
+            padding: const EdgeInsets.only(top: 7.0)
             ),
             new Container(
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
+              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0),
               alignment: Alignment.center,
               padding: const EdgeInsets.only(left: 0.0, right: 10.0),
               child: emailField
             ),
           ),
           new Padding(
-            padding: const EdgeInsets.only(top: 10.0)
+            padding: const EdgeInsets.only(top: 7.0)
             ),
             new Container(
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
+              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0),
               alignment: Alignment.center,
               padding: const EdgeInsets.only(left: 0.0, right: 10.0),
               child: adressField
             ),
           ),
           new Padding(
-            padding: const EdgeInsets.only(top: 10.0)
+            padding: const EdgeInsets.only(top: 7.0)
             ),
             new Container(
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
+              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0),
               alignment: Alignment.center,
               padding: const EdgeInsets.only(left: 0.0, right: 10.0),
               child: phoneField
             ),
           ),
           new Padding(
-            padding: const EdgeInsets.only(top: 10.0)
+            padding: const EdgeInsets.only(top: 7.0)
             ),
             new Container(
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
+              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0),
               alignment: Alignment.center,
               padding: const EdgeInsets.only(left: 0.0, right: 10.0),
               child: accountsField
@@ -304,7 +305,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
           ),
 
           Divider(
-            height: 12.0,
+            height: 10.0,
           ),
           new Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -328,11 +329,11 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
           ),
           
           new Padding(
-            padding: const EdgeInsets.only(top: 5.0)
+            padding: const EdgeInsets.only(bottom: 5.0)
             ),
           new Container(
             width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 5.0, bottom: 15.0),
+            margin: const EdgeInsets.only(left: 35.0, right: 35.0, bottom: 15.0),
             alignment: Alignment.center,
             child: new Row(
               children: <Widget>[
