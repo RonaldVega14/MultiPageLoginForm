@@ -56,7 +56,7 @@ class HomeScreen extends StatefulWidget {
             padding: EdgeInsets.only(top: 120.0),
             child: Center(
               child: SizedBox(
-                  height: 120.0,
+                  height: 90.0,
                   child: Image.asset("assets/logot_sgb.png",
                   fit:BoxFit.contain,
                   ),
