@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_form2/pages/login_page.dart';
+import 'package:login_form2/pages/singup_page.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class HomeScreen extends StatefulWidget {
     _controller.animateToPage(
       0,
       duration: Duration(milliseconds: 800),
-      curve: Curves.bounceOut,
+      curve: Curves.easeIn,
     );
   }
 
@@ -22,7 +23,7 @@ class HomeScreen extends StatefulWidget {
     _controller.animateToPage(
       2,
       duration: Duration(milliseconds: 800),
-      curve: Curves.bounceOut,
+      curve: Curves.easeOut,
     );
   }
 
@@ -167,7 +168,8 @@ class HomeScreen extends StatefulWidget {
         physics: new AlwaysScrollableScrollPhysics(),
         children: <Widget>[
           LoginScreen(),
-          _homePage()
+          _homePage(),
+          SignUpScreen()
         ],
         scrollDirection: Axis.horizontal,
       ),

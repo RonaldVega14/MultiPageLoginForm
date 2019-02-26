@@ -182,27 +182,23 @@ class LoginScreen extends StatefulWidget {
                             child: Text(
                               "ENTRAR",
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                              style: style.copyWith(color: Colors.white, fontWeight: FontWeight.bold)
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                        ],
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ),
               ],
             ),
-          ),
-        ],
-      ),
-            ) 
-    ),
+          ) 
         ),
+      ),
     ),
-    );
-  }
-
-
+  );
+}
 }
