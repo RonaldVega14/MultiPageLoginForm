@@ -31,8 +31,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
+      resizeToAvoidBottomPadding: true,
       body: Center(
-        child: LoginScreen(),
+        child: HomeScreen(),
         ),
     );
   }

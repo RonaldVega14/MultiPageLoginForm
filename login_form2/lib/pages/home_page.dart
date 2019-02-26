@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:login_form2/pages/login_page.dart';
 
-class LoginScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => new _LoginScreenState();
+  _HomeScreenState createState() => new _HomeScreenState();
     
   }
   
-  class _LoginScreenState extends State<LoginScreen> with TickerProviderStateMixin{
+  class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
   PageController _controller = new PageController(initialPage: 1, viewportFraction: 1.0);
   
   gotoLogin() {
@@ -36,9 +37,9 @@ class LoginScreen extends StatefulWidget {
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         gradient: new LinearGradient(colors: [const Color(0xffffff),const Color(0xFF026183), const Color(0xFF18105C)],
-        begin:FractionalOffset.topLeft,
-        end: FractionalOffset.bottomRight,
-        stops: [0.0,0.5, 1.0],
+        begin:FractionalOffset.topCenter,
+        end: FractionalOffset.bottomCenter,
+        stops: [0.0,0.6, 1.0],
         tileMode: TileMode.clamp
         ),
         image: DecorationImage(
@@ -165,6 +166,7 @@ class LoginScreen extends StatefulWidget {
         controller: _controller,
         physics: new AlwaysScrollableScrollPhysics(),
         children: <Widget>[
+          LoginScreen(),
           _homePage()
         ],
         scrollDirection: Axis.horizontal,
