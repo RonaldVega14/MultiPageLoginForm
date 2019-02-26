@@ -35,10 +35,10 @@ class LoginScreen extends StatefulWidget {
     return new Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
-        gradient: new LinearGradient(colors: [const Color(0xffffff), const Color(0xFF64B5F6)],
-        begin:FractionalOffset.topCenter,
-        end: FractionalOffset.bottomCenter,
-        stops: [0.0, 1.0],
+        gradient: new LinearGradient(colors: [const Color(0xffffff),const Color(0xFF026183), const Color(0xFF18105C)],
+        begin:FractionalOffset.topLeft,
+        end: FractionalOffset.bottomRight,
+        stops: [0.0,0.5, 1.0],
         tileMode: TileMode.clamp
         ),
         image: DecorationImage(
@@ -69,7 +69,7 @@ class LoginScreen extends StatefulWidget {
                 Text(
                   "Bienvenidos a SGB Cliente",
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: Colors.white,
                     fontSize: 24.0,
                   ),
                 ),
