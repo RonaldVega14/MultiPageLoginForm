@@ -23,7 +23,7 @@ class LoginScreen extends StatefulWidget {
     final emailField = TextFormField(
       validator: (val) => !val.contains('@') ? 'Usuario Incorrecto' :null,
       onSaved: (val) => _email = val,
-      style: TextStyle(fontFamily: 'Montserrat', fontSize: 14.0, color: Colors.black),
+      style: TextStyle(fontFamily: 'Montserrat', fontSize: 15.0, color: Colors.black),
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.person),
         labelText: 'Usuario',
@@ -31,10 +31,10 @@ class LoginScreen extends StatefulWidget {
         border: OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.blueAccent,
-            width: 0.5,
+            width: 1.0,
             style: BorderStyle.solid
           ),
-          borderRadius: BorderRadius.circular(30.0)
+          borderRadius: BorderRadius.circular(25.0)
         )
       ),
     );
@@ -49,7 +49,7 @@ class LoginScreen extends StatefulWidget {
         labelText: 'Contraseña',
         contentPadding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30.0)
+          borderRadius: BorderRadius.circular(25.0)
         )
       ),
     );
@@ -74,7 +74,7 @@ class LoginScreen extends StatefulWidget {
               child: new Column(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.all(80.0),
+                padding: EdgeInsets.fromLTRB(80.0, 45.0, 80.0, 40.0),
                 child: Center(
                   child: SizedBox(
                     height: 120.0,
@@ -84,26 +84,12 @@ class LoginScreen extends StatefulWidget {
                   ),
                 ),
               ),
-          new Row(
-            children: <Widget>[
-              new Expanded(
-                child: new Padding(
-                  padding: const EdgeInsets.only(left: 40.0),
-                  child: new Text(
-                    "USUARIO",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent,
-                      fontSize: 15.0,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          new Padding(
+            padding: const EdgeInsets.only(bottom: 15.0)
+            ),
           new Container(
             width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 10.0),
+            margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
             alignment: Alignment.center,
             padding: const EdgeInsets.only(left: 0.0, right: 10.0),
             child: emailField
@@ -111,36 +97,22 @@ class LoginScreen extends StatefulWidget {
           SizedBox(
             height: 14.0,
           ),
-          new Row(
-            children: <Widget>[
-              new Expanded(
-                child: new Padding(
-                  padding: const EdgeInsets.only(left: 40.0),
-                  child: new Text(
-                    "CONTRASEÑA",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent,
-                      fontSize: 15.0,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          new Padding(
+            padding: const EdgeInsets.only(top: 15.0)
+            ),
           new Container(
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 10.0),
+              margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 10.0),
               alignment: Alignment.center,
               padding: const EdgeInsets.only(left: 0.0, right: 10.0),
               child: passwordField
             ),
           ),
           Divider(
-            height: 14.0,
+            height: 24.0,
           ),
           new Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -149,7 +121,7 @@ class LoginScreen extends StatefulWidget {
                 padding: const EdgeInsets.only(right: 20.0),
                 child: new FlatButton(
                   child: new Text(
-                    "Forgot Password?",
+                    "¿Olvidó su contraseña?",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.blueAccent,
@@ -162,22 +134,45 @@ class LoginScreen extends StatefulWidget {
               ),
             ],
           ),
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(right: 20.0),
+                child: new FlatButton(
+                  child: new Text(
+                    "¿Olvidó su usuario?",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent,
+                      fontSize: 15.0,
+                    ),
+                    textAlign: TextAlign.end,
+                  ),
+                  onPressed: () => {},
+                ),
+              ),
+            ],
+          ),
+          new Padding(
+            padding: const EdgeInsets.only(top: 15.0)
+            ),
           new Container(
             width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 20.0),
+            margin: const EdgeInsets.only(left: 35.0, right: 35.0, top: 20.0, bottom: 15.0),
             alignment: Alignment.center,
             child: new Row(
               children: <Widget>[
                 new Expanded(
                   child: new FlatButton(
                     shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0),
+                      borderRadius: new BorderRadius.circular(25.0),
                     ),
-                    color: Colors.redAccent,
+                    color: Colors.blueAccent,
                     onPressed: () => {},
                     child: new Container(
                       padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
+                        vertical: 11.0,
                         horizontal: 20.0,
                       ),
                       child: new Row(
@@ -185,7 +180,7 @@ class LoginScreen extends StatefulWidget {
                         children: <Widget>[
                           new Expanded(
                             child: Text(
-                              "LOGIN",
+                              "ENTRAR",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,
@@ -195,34 +190,6 @@ class LoginScreen extends StatefulWidget {
                         ],
                       ),
                     ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          new Container(
-            width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 10.0),
-            alignment: Alignment.center,
-            child: Row(
-              children: <Widget>[
-                new Expanded(
-                  child: new Container(
-                    margin: EdgeInsets.all(8.0),
-                    decoration: BoxDecoration(border: Border.all(width: 0.25)),
-                  ),
-                ),
-                Text(
-                  "OR CONNECT WITH",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                new Expanded(
-                  child: new Container(
-                    margin: EdgeInsets.all(2.0),
-                    decoration: BoxDecoration(border: Border.all(width: 0.25)),
                   ),
                 ),
               ],
