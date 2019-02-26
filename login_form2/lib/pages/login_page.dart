@@ -31,14 +31,19 @@ class LoginScreen extends StatefulWidget {
     super.initState();
   }
   
-  Widget HomePage() {
+  Widget _homePage() {
     return new Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
-        color: Colors.blueAccent,
+        gradient: new LinearGradient(colors: [const Color(0xffffff), const Color(0xFF64B5F6)],
+        begin:FractionalOffset.topCenter,
+        end: FractionalOffset.bottomCenter,
+        stops: [0.0, 1.0],
+        tileMode: TileMode.clamp
+        ),
         image: DecorationImage(
           colorFilter: new ColorFilter.mode(
-            Colors.black.withOpacity(0.4), BlendMode.dstATop),
+            Colors.black.withOpacity(0.3), BlendMode.dstATop),
             image: AssetImage('assets/bg_sgb.jpg'),
             fit: BoxFit.cover,
         ),
@@ -46,11 +51,11 @@ class LoginScreen extends StatefulWidget {
       child: new Column(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(top: 250.0),
+            padding: EdgeInsets.only(top: 120.0),
             child: Center(
               child: SizedBox(
-                  height: 80.0,
-                  child: Image.asset("assets/logo_sgb.png",
+                  height: 120.0,
+                  child: Image.asset("assets/logot_sgb.png",
                   fit:BoxFit.contain,
                   ),
                 ),
@@ -64,7 +69,7 @@ class LoginScreen extends StatefulWidget {
                 Text(
                   "Bienvenidos a SGB Cliente",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.blue,
                     fontSize: 24.0,
                   ),
                 ),
@@ -160,7 +165,7 @@ class LoginScreen extends StatefulWidget {
         controller: _controller,
         physics: new AlwaysScrollableScrollPhysics(),
         children: <Widget>[
-          HomePage()
+          _homePage()
         ],
         scrollDirection: Axis.horizontal,
       ),
