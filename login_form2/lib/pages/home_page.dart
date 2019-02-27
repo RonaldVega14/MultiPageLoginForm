@@ -37,10 +37,10 @@ class HomeScreen extends StatefulWidget {
     return new Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
-        gradient: new LinearGradient(colors: [const Color(0xFF18105C)],
+        gradient: new LinearGradient(colors: [const Color(0xFFFFFFFF), const Color(0xFF448AFF)],
         begin:FractionalOffset.topCenter,
         end: FractionalOffset.bottomCenter,
-        stops: [0.0],
+        stops: [0.0, 0.8],
         tileMode: TileMode.clamp
         ),
         image: DecorationImage(
