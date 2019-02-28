@@ -87,8 +87,10 @@ class HomeScreen extends StatefulWidget {
                 new Expanded(
                   child: new OutlineButton(
                     shape: new RoundedRectangleBorder(
+                      
                         borderRadius: new BorderRadius.circular(30.0)),
                     color: Colors.blueAccent,
+                    borderSide: BorderSide(color: Colors.white, width: 1.5),
                     highlightedBorderColor: Colors.white,
                     onPressed: () => gotoSignup(),
                     child: new Container(

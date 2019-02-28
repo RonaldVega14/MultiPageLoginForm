@@ -123,7 +123,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
     );
 //Teléfono
     final phoneField = TextFormField(
-      validator: (val) => !val.contains('@') ? 'Usuario Incorrecto' :null,
+      validator: (val) => !val.contains('') ? 'Telefono Incorrecto' :null,
       onSaved: (val) => _email = val,
       style: TextStyle(fontFamily: 'Montserrat', fontSize: 15.0, color: Colors.black),
       decoration: InputDecoration(
@@ -145,7 +145,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
     final accountsField = 
     Container(
       child: TextFormField(
-      validator: (val) => !val.contains('@') ? 'Usuario Incorrecto' :null,
+      validator: (val) => !val.contains('') ? 'Cuenta Incorrecto' :null,
       onSaved: (val) => _email = val,
       style: TextStyle(fontFamily: 'Montserrat', fontSize: 15.0, color: Colors.black),
       decoration: InputDecoration(
@@ -206,7 +206,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
               Padding(
                 padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
                   child: new Text(
-                    "Registrate como persona Natura",
+                    "Registrate como persona Natural",
                     style: style.copyWith(
                       fontWeight: FontWeight.bold,
                       color: Colors.blueAccent,
