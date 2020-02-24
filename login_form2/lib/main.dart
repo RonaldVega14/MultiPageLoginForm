@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/login_page.dart';
+import 'pages/home_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,8 +31,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
+      resizeToAvoidBottomPadding: true,
       body: Center(
-        child: LoginScreen(),
+        child: HomeScreen(),
         ),
     );
   }
